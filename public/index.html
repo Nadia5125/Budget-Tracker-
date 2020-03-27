@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color" content="#317EFB">
+  <link rel="shortcut icon" href="icons/icon-192x192.png" type="image/x-icon">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <title>Budget  Tracker</title>
+
+  
+</head>
+<body>
+  <div class="nav-bar text-center">
+    <div class="text">
+      <h1 class="display-4">Budget Tracker</h1>
+    </div>
+  </div>
+  <br>
+  <div class="wrapper">
+    <div class="card">
+      <div class="total">
+        <div class="total">Your total is: $<span id="total">0</span></div>
+        <hr color="black" style="margin-right: 250px; margin-left: 250px; background-color: rgb(187, 181, 178);;">
+      </div>
+      
+      <br>
+      <P>Bellow is to Add your budget and expenses</P>
+      <div class="form">        
+        <input type="text" id="t-name" placeholder="Name of transaction" />
+        <input type="number" min="0" id="t-amount" placeholder="Transaction amount" />
+        <button id="add-btn"><i class="fa fa-plus buttons"></i> Add Funds</button>
+        <button id="sub-btn"><i class="fa fa-minus"></i> Subtract Funds</button>
+        <p class="error"></p>
+    </div>
+  
+    <br>
+    <div class="transactions" style="width: 100%;">
+      <table>
+        <thead>
+          <th>Transaction</th>
+          <th>Amount</th>
+        </thead>
+        <tbody id="tbody">          
+        </tbody>
+      </table>
+    </div>
+  </div>
+    <br>
+    <canvas id = "newCanvas" width = "200" height = "100" style = "border:1px solid #000000; background-color: white;"></canvas>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+  <script src="index.js"></script>
+</body>
+</html>
